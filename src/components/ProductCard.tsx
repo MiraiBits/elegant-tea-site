@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Image from "next/image";
 import { ShoppingBag, Star } from "lucide-react";
 
 interface ProductCardProps {
@@ -31,10 +32,12 @@ export default function ProductCard({
 
             {/* Image Container */}
             <div className="relative w-full aspect-[4/5] overflow-hidden mb-6 bg-gray-100 rounded-sm">
-                {/* We would use a real image here. For now, a placeholder div or image */}
-                <div className="absolute inset-0 bg-primary/5 flex items-center justify-center text-primary/20 font-serif text-4xl">
-                    ZLON
-                </div>
+                <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    className="object-cover"
+                />
 
                 {/* Overlay with Quick Action */}
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

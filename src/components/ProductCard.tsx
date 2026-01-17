@@ -37,8 +37,11 @@ export default function ProductCard({
                 </div>
 
                 {/* Overlay with Quick Action */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <button className="bg-white text-primary px-6 py-3 rounded-none font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg hover:bg-accent hover:text-white">
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <button
+                        aria-label={`Quick view ${name}`}
+                        className="bg-white text-primary px-6 py-3 rounded-none font-medium transform translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-300 shadow-lg hover:bg-accent hover:text-white focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                    >
                         Quick View
                     </button>
                 </div>
@@ -62,7 +65,10 @@ export default function ProductCard({
 
                 <div className="flex items-center justify-center gap-4 mt-4">
                     <span className="text-lg font-bold text-primary">{price}</span>
-                    <button className="p-2 rounded-full border border-gray-200 text-gray-600 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300">
+                    <button
+                        aria-label={`Add ${name} to cart`}
+                        className="p-2 rounded-full border border-gray-200 text-gray-600 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                    >
                         <ShoppingBag size={18} />
                     </button>
                 </div>

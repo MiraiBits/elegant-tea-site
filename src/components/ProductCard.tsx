@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ShoppingBag, Star } from "lucide-react";
 
 interface ProductCardProps {
@@ -16,7 +15,7 @@ export default function ProductCard({
     weight,
     price,
     rating = 5,
-    image = "/images/tea-placeholder.png", // Fallback
+    // image prop is currently unused but kept for interface consistency
     isPopular = false,
 }: ProductCardProps) {
     return (
@@ -36,9 +35,12 @@ export default function ProductCard({
                     ZLON
                 </div>
 
-                {/* Overlay with Quick Action */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <button className="bg-white text-primary px-6 py-3 rounded-none font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg hover:bg-accent hover:text-white">
+                {/* Overlay with Quick Action - Added group-focus-within for keyboard accessibility */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <button
+                        aria-label={`Quick view ${name}`}
+                        className="bg-white text-primary px-6 py-3 rounded-none font-medium transform translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-300 shadow-lg hover:bg-accent hover:text-white focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                    >
                         Quick View
                     </button>
                 </div>
@@ -46,9 +48,13 @@ export default function ProductCard({
 
             {/* Content */}
             <div className="text-center space-y-2">
-                <div className="flex justify-center text-accent mb-1">
+                <div
+                    className="flex justify-center text-accent mb-1"
+                    aria-label={`Rated ${rating} out of 5 stars`}
+                    role="img"
+                >
                     {[...Array(rating)].map((_, i) => (
-                        <Star key={i} size={12} fill="currentColor" />
+                        <Star key={i} size={12} fill="currentColor" aria-hidden="true" />
                     ))}
                 </div>
 
@@ -62,7 +68,10 @@ export default function ProductCard({
 
                 <div className="flex items-center justify-center gap-4 mt-4">
                     <span className="text-lg font-bold text-primary">{price}</span>
-                    <button className="p-2 rounded-full border border-gray-200 text-gray-600 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300">
+                    <button
+                        aria-label={`Add ${name} to cart`}
+                        className="p-2 rounded-full border border-gray-200 text-gray-600 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                    >
                         <ShoppingBag size={18} />
                     </button>
                 </div>

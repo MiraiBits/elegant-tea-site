@@ -44,15 +44,17 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <button className="bg-accent hover:bg-yellow-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
+                    <button className="bg-accent hover:bg-yellow-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent">
                         Shop Now <ShoppingBag size={16} />
                     </button>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-accent"
+                    className="md:hidden text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm p-1"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label={isMobileMenuOpen ? "Close main menu" : "Open main menu"}
+                    aria-expanded={isMobileMenuOpen}
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} className={isScrolled ? "text-primary" : "text-white"} />}
                 </button>
@@ -78,7 +80,7 @@ export default function Navbar() {
                                     {link.name}
                                 </Link>
                             ))}
-                            <button className="w-full bg-accent text-white py-3 rounded-lg font-medium shadow-md mt-4">
+                            <button className="w-full bg-accent text-white py-3 rounded-lg font-medium shadow-md mt-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent">
                                 Shop Now
                             </button>
                         </div>

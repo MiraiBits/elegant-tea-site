@@ -53,6 +53,9 @@ export default function Navbar() {
                 <button
                     className="md:hidden text-accent"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label={isMobileMenuOpen ? "Close main menu" : "Open main menu"}
+                    aria-expanded={isMobileMenuOpen}
+                    aria-controls="mobile-menu"
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} className={isScrolled ? "text-primary" : "text-white"} />}
                 </button>
@@ -62,6 +65,7 @@ export default function Navbar() {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
+                        id="mobile-menu"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}

@@ -1,5 +1,19 @@
 
-> elegant-tea-site@0.1.0 dev
+> elegant-tea-site@0.1.0 dev /app
 > next dev
 
-sh: 1: next: not found
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+✓ Ready in 1090ms
+○ Compiling / ...
+Image with src "/images/hero-bg.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET / 200 in 5.4s (compile: 4.8s, render: 645ms)
+ GET /images/pattern.png 404 in 855ms (compile: 750ms, render: 105ms)
+Image with src "/images/hero-bg.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET / 200 in 840ms (compile: 186ms, render: 655ms)
+ GET /images/pattern.png 404 in 72ms (compile: 9ms, render: 63ms)

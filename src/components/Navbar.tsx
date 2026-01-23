@@ -45,7 +45,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <button className="bg-accent hover:bg-yellow-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
-                        Shop Now <ShoppingBag size={16} />
+                        Shop Now <ShoppingBag size={16} aria-hidden="true" />
                     </button>
                 </div>
 
@@ -53,8 +53,11 @@ export default function Navbar() {
                 <button
                     className="md:hidden text-accent"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-controls="mobile-menu"
+                    aria-expanded={isMobileMenuOpen}
+                    aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 >
-                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} className={isScrolled ? "text-primary" : "text-white"} />}
+                    {isMobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} className={isScrolled ? "text-primary" : "text-white"} aria-hidden="true" />}
                 </button>
             </div>
 
@@ -62,6 +65,7 @@ export default function Navbar() {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
+                        id="mobile-menu"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}

@@ -15,9 +15,9 @@ export default function Footer() {
                             Premium Ceylon Tea harvested from the finest plantations in Sri Lanka. Experience the essence of purity and tradition.
                         </p>
                         <div className="flex space-x-4 pt-2">
-                            <a href="#" className="text-white/70 hover:text-accent transition-colors"><Instagram size={20} /></a>
-                            <a href="#" className="text-white/70 hover:text-accent transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="text-white/70 hover:text-accent transition-colors"><Twitter size={20} /></a>
+                            <a href="#" aria-label="Instagram" className="text-white/70 hover:text-accent transition-colors"><Instagram size={20} aria-hidden="true" /></a>
+                            <a href="#" aria-label="Facebook" className="text-white/70 hover:text-accent transition-colors"><Facebook size={20} aria-hidden="true" /></a>
+                            <a href="#" aria-label="Twitter" className="text-white/70 hover:text-accent transition-colors"><Twitter size={20} aria-hidden="true" /></a>
                         </div>
                     </div>
 

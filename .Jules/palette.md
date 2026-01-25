@@ -1,10 +1,3 @@
-## 2024-05-23 - Accessibility of Opacity-Hidden Overlays
-**Learning:** Elements hidden with `opacity-0` (like hover overlays) remain in the DOM and are often keyboard focusable but invisible, creating a confusing experience for keyboard users.
-**Action:** Always pair `group-hover:opacity-100` with `group-focus-within:opacity-100` on the container to ensure the overlay becomes visible when a child element receives focus.
-
-## 2024-05-24 - Disclosure Pattern for Mobile Toggles
-**Learning:** Toggle buttons (like mobile menus) often lack state communication for screen readers, making them confusing.
-**Action:** Always implement the full Disclosure Pattern: `aria-expanded` on the button, `aria-controls` pointing to the content ID, and a dynamic `aria-label`.
-## 2025-01-22 - Mobile Menu Accessibility
-**Learning:** Mobile menu toggles are often overlooked for accessibility. They require `aria-expanded`, `aria-controls`, and dynamic `aria-label` to be usable by screen readers.
-**Action:** Ensure all toggle buttons include these attributes and that the controlled element has a matching ID.
+## 2024-05-22 - Navbars in Pages vs Layouts
+**Learning:** Placing the `Navbar` component inside `page.tsx` (instead of `layout.tsx`) complicates implementing a global "Skip to Main Content" link. A wrapper in `layout.tsx` (e.g., `<main id="skip-target">{children}</main>`) captures the Navbar as well, defeating the purpose.
+**Action:** When adding skip links, verify if navigation is inside `children`. If so, target the first content component (like `Hero`) explicitly or refactor navigation to the layout.

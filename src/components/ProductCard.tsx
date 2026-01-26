@@ -72,7 +72,7 @@ export default function ProductCard({
                         aria-label={`Add ${name} to cart`}
                         className="p-2 rounded-full border border-gray-200 text-gray-600 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
                     >
-                        <ShoppingBag size={18} />
+                        <ShoppingBag size={18} aria-hidden="true" />
                     </button>
                 </div>
             </div>

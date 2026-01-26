@@ -8,3 +8,7 @@
 ## 2025-01-22 - Mobile Menu Accessibility
 **Learning:** Mobile menu toggles are often overlooked for accessibility. They require `aria-expanded`, `aria-controls`, and dynamic `aria-label` to be usable by screen readers.
 **Action:** Ensure all toggle buttons include these attributes and that the controlled element has a matching ID.
+
+## 2025-02-18 - Input Accessibility
+**Learning:** Inputs designed without visible labels (like newsletter subscriptions) are common in this design.
+**Action:** Use the `sr-only` utility class on a `<label>` element to ensure accessibility without compromising the visual design.

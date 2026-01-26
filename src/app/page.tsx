@@ -54,15 +54,15 @@ export default function Home() {
               </p>
               <div className="pt-4 grid grid-cols-3 gap-6 text-center">
                 <div className="flex flex-col items-center gap-2">
-                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Leaf size={24} /></div>
+                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Leaf size={24} aria-hidden="true" /></div>
                   <span className="text-sm font-bold text-gray-700">100% Organic</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Award size={24} /></div>
+                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Award size={24} aria-hidden="true" /></div>
                   <span className="text-sm font-bold text-gray-700">Premium Quality</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Sun size={24} /></div>
+                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Sun size={24} aria-hidden="true" /></div>
                   <span className="text-sm font-bold text-gray-700">Fresh Harvest</span>
                 </div>
               </div>
@@ -103,7 +103,9 @@ export default function Home() {
             Subscribe to our newsletter for exclusive offers, tea brewing tips, and stories from the mountains.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <label htmlFor="email-subscribe" className="sr-only">Email address</label>
             <input
+              id="email-subscribe"
               type="email"
               placeholder="Your email address"
               className="px-6 py-3 rounded-none text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent w-full"

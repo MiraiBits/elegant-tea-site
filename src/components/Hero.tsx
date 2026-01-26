@@ -3,7 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative h-screen w-full overflow-hidden">
+        <section
+            id="main-content"
+            tabIndex={-1}
+            className="relative h-screen w-full overflow-hidden outline-none"
+        >
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image

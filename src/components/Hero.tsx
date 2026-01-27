@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
@@ -48,9 +49,13 @@ export default function Hero() {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <Link
+                href="#story"
+                aria-label="Scroll down to Our Story"
+                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce p-4 hover:bg-white/10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+            >
                 <div className="w-[1px] h-16 bg-gradient-to-b from-transparent to-white/50" />
-            </div>
+            </Link>
         </section>
     );
 }

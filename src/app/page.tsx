@@ -103,7 +103,11 @@ export default function Home() {
             Subscribe to our newsletter for exclusive offers, tea brewing tips, and stories from the mountains.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <label htmlFor="newsletter-email" className="sr-only">
+              Email address
+            </label>
             <input
+              id="newsletter-email"
               type="email"
               placeholder="Your email address"
               className="px-6 py-3 rounded-none text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent w-full"

@@ -57,6 +57,8 @@ export default function Hero() {
             {/* Scroll Indicator */}
             <Link
                 href="#story"
+                aria-label="Scroll down to Our Story"
+                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce p-4 hover:bg-white/10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
                 aria-label="Scroll to Our Story"
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer z-20 p-2"
             >

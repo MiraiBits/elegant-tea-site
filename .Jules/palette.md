@@ -12,3 +12,10 @@
 ## 2026-02-15 - Reusable Scroll Logic
 **Learning:** Hardcoded scroll thresholds in hooks (like `window.scrollY > 50`) limit reusability for different UI elements. Adding a `threshold` parameter to `useThrottledScroll` allowed reusing the same logic for both the Navbar background and the "Back to Top" button without code duplication.
 **Action:** When creating event listeners (scroll, resize), always parameterize thresholds or conditions to support multiple use cases.
+## 2026-02-05 - Accessible Smooth Scrolling
+**Learning:** For Single Page Applications (SPAs) with anchor navigation, smooth scrolling is essential for context preservation. However, it can trigger motion sickness.
+**Action:** Always combine `scroll-smooth` with `motion-reduce:scroll-auto` (or CSS `@media (prefers-reduced-motion)`) to respect user accessibility preferences.
+
+## 2026-02-06 - Unused Assets and Props
+**Learning:** Sometimes high-quality assets (like product images) exist in `public/` but are ignored by components due to unfinished implementation (commented out props). Enabling them is a high-impact, low-effort UX win.
+**Action:** When auditing components, check for unused props and cross-reference with available assets in `public/` to find "quick wins" for visual polish.

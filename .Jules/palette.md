@@ -11,3 +11,7 @@
 ## 2026-02-05 - Accessible Smooth Scrolling
 **Learning:** For Single Page Applications (SPAs) with anchor navigation, smooth scrolling is essential for context preservation. However, it can trigger motion sickness.
 **Action:** Always combine `scroll-smooth` with `motion-reduce:scroll-auto` (or CSS `@media (prefers-reduced-motion)`) to respect user accessibility preferences.
+
+## 2026-02-06 - Unused Assets and Props
+**Learning:** Sometimes high-quality assets (like product images) exist in `public/` but are ignored by components due to unfinished implementation (commented out props). Enabling them is a high-impact, low-effort UX win.
+**Action:** When auditing components, check for unused props and cross-reference with available assets in `public/` to find "quick wins" for visual polish.

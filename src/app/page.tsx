@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
+import NewsletterForm from "@/components/NewsletterForm";
 import Footer from "@/components/Footer";
 import NewsletterForm from "@/components/NewsletterForm";
 import { Leaf, Award, Sun } from "lucide-react";

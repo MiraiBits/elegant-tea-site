@@ -8,3 +8,7 @@
 ## 2026-02-02 - Form Feedback & Live Regions
 **Learning:** Static "fake" forms are a common anti-pattern. Upgrading them to real `<form>` elements with `aria-live` regions for feedback transforms a dead UI into an accessible, responsive experience with minimal code.
 **Action:** Always wrap inputs in `<form>` and use `aria-live="polite"` for dynamic status messages (loading/success/error) to support screen readers without extra focus management.
+
+## 2026-02-06 - Unused Assets and Props
+**Learning:** Sometimes high-quality assets (like product images) exist in `public/` but are ignored by components due to unfinished implementation (commented out props). Enabling them is a high-impact, low-effort UX win.
+**Action:** When auditing components, check for unused props and cross-reference with available assets in `public/` to find "quick wins" for visual polish.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SkipLink from "@/components/SkipLink";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,12 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth motion-reduce:scroll-auto">
       <body
         className={`${inter.variable} ${playfair.variable} antialiased font-sans`}
       >
         <SkipLink />
         {children}
+        <BackToTop />
       </body>
     </html>
   );

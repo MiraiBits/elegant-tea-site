@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
@@ -37,20 +38,30 @@ export default function Hero() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
-                    <button className="bg-accent hover:bg-yellow-600 text-white px-8 py-4 rounded-none text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center gap-2 group">
+                    <Link
+                        href="#products"
+                        className="bg-accent hover:bg-yellow-600 text-white px-8 py-4 rounded-none text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center gap-2 group"
+                    >
                         Explore Collection
                         <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-none text-lg font-medium transition-all duration-300 backdrop-blur-sm">
+                    </Link>
+                    <Link
+                        href="#story"
+                        className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-none text-lg font-medium transition-all duration-300 backdrop-blur-sm"
+                    >
                         Our Story
-                    </button>
+                    </Link>
                 </div>
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <Link
+                href="#story"
+                aria-label="Scroll to Our Story"
+                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer z-20 p-2"
+            >
                 <div className="w-[1px] h-16 bg-gradient-to-b from-transparent to-white/50" />
-            </div>
+            </Link>
         </section>
     );
 }

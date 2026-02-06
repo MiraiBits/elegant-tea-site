@@ -8,6 +8,9 @@
 ## 2026-02-02 - Form Feedback & Live Regions
 **Learning:** Static "fake" forms are a common anti-pattern. Upgrading them to real `<form>` elements with `aria-live` regions for feedback transforms a dead UI into an accessible, responsive experience with minimal code.
 **Action:** Always wrap inputs in `<form>` and use `aria-live="polite"` for dynamic status messages (loading/success/error) to support screen readers without extra focus management.
+## 2026-02-05 - Accessible Smooth Scrolling
+**Learning:** For Single Page Applications (SPAs) with anchor navigation, smooth scrolling is essential for context preservation. However, it can trigger motion sickness.
+**Action:** Always combine `scroll-smooth` with `motion-reduce:scroll-auto` (or CSS `@media (prefers-reduced-motion)`) to respect user accessibility preferences.
 
 ## 2026-02-06 - Unused Assets and Props
 **Learning:** Sometimes high-quality assets (like product images) exist in `public/` but are ignored by components due to unfinished implementation (commented out props). Enabling them is a high-impact, low-effort UX win.

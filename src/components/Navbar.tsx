@@ -6,16 +6,16 @@ import { Menu, X, ShoppingBag } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import useThrottledScroll from '../hooks/useThrottledScroll';
 
+const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Our Products", href: "#products" },
+    { name: "Our Story", href: "#story" },
+    { name: "Contact", href: "#contact" },
+];
+
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const isScrolled = useThrottledScroll(100);
-
-    const navLinks = [
-        { name: "Home", href: "/" },
-        { name: "Our Products", href: "#products" },
-        { name: "Our Story", href: "#story" },
-        { name: "Contact", href: "#contact" },
-    ];
 
     return (
         <nav

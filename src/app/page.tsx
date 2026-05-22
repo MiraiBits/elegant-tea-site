@@ -3,35 +3,34 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import Footer from "@/components/Footer";
-import NewsletterForm from "@/components/NewsletterForm";
 import { Leaf, Award, Sun } from "lucide-react";
 
-export default function Home() {
-  const products = [
-    {
-      id: "1",
-      name: "Premium Black Tea",
-      weight: "100g",
-      price: "LKR 1,200",
-      image: "/images/tea-100g.png", // We'll use placeholders for now
-    },
-    {
-      id: "2",
-      name: "Premium Black Tea",
-      weight: "500g",
-      price: "LKR 3,500",
-      isPopular: true,
-      image: "/images/tea-500g.png",
-    },
-    {
-      id: "3",
-      name: "Premium Black Tea",
-      weight: "1kg",
-      price: "LKR 6,000",
-      image: "/images/tea-1kg.png",
-    },
-  ];
+const products = [
+  {
+    id: "1",
+    name: "Premium Black Tea",
+    weight: "100g",
+    price: "LKR 1,200",
+    image: "/images/tea-100g.png", // We'll use placeholders for now
+  },
+  {
+    id: "2",
+    name: "Premium Black Tea",
+    weight: "500g",
+    price: "LKR 3,500",
+    isPopular: true,
+    image: "/images/tea-500g.png",
+  },
+  {
+    id: "3",
+    name: "Premium Black Tea",
+    weight: "1kg",
+    price: "LKR 6,000",
+    image: "/images/tea-1kg.png",
+  },
+];
 
+export default function Home() {
   return (
     <main className="min-h-screen bg-[#F9F9F5]">
       <Navbar />

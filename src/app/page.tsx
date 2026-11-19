@@ -5,32 +5,32 @@ import NewsletterForm from "@/components/NewsletterForm";
 import Footer from "@/components/Footer";
 import { Leaf, Award, Sun } from "lucide-react";
 
-export default function Home() {
-  const products = [
-    {
-      id: "1",
-      name: "Premium Black Tea",
-      weight: "100g",
-      price: "LKR 1,200",
-      image: "/images/tea-100g.png", // We'll use placeholders for now
-    },
-    {
-      id: "2",
-      name: "Premium Black Tea",
-      weight: "500g",
-      price: "LKR 3,500",
-      isPopular: true,
-      image: "/images/tea-500g.png",
-    },
-    {
-      id: "3",
-      name: "Premium Black Tea",
-      weight: "1kg",
-      price: "LKR 6,000",
-      image: "/images/tea-1kg.png",
-    },
-  ];
+const products = [
+  {
+    id: "1",
+    name: "Premium Black Tea",
+    weight: "100g",
+    price: "LKR 1,200",
+    image: "/images/tea-100g.png", // We'll use placeholders for now
+  },
+  {
+    id: "2",
+    name: "Premium Black Tea",
+    weight: "500g",
+    price: "LKR 3,500",
+    isPopular: true,
+    image: "/images/tea-500g.png",
+  },
+  {
+    id: "3",
+    name: "Premium Black Tea",
+    weight: "1kg",
+    price: "LKR 6,000",
+    image: "/images/tea-1kg.png",
+  },
+];
 
+export default function Home() {
   return (
     <main className="min-h-screen bg-[#F9F9F5]">
       <Navbar />
@@ -103,20 +103,6 @@ export default function Home() {
           <p className="text-white/80 max-w-xl mx-auto mb-8">
             Subscribe to our newsletter for exclusive offers, tea brewing tips, and stories from the mountains.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <label htmlFor="newsletter-email" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="newsletter-email"
-              type="email"
-              placeholder="Your email address"
-              className="px-6 py-3 rounded-none text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent w-full"
-            />
-            <button className="bg-accent hover:bg-yellow-600 text-white px-8 py-3 font-medium transition-colors shadow-lg">
-              Subscribe
-            </button>
-          </div>
           <NewsletterForm />
         </div>
       </section>

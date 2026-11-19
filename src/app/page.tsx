@@ -55,15 +55,15 @@ export default function Home() {
               </p>
               <div className="pt-4 grid grid-cols-3 gap-6 text-center">
                 <div className="flex flex-col items-center gap-2">
-                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Leaf size={24} /></div>
+                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Leaf size={24} aria-hidden="true" /></div>
                   <span className="text-sm font-bold text-gray-700">100% Organic</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Award size={24} /></div>
+                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Award size={24} aria-hidden="true" /></div>
                   <span className="text-sm font-bold text-gray-700">Premium Quality</span>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Sun size={24} /></div>
+                  <div className="p-3 bg-primary/5 rounded-full text-primary"><Sun size={24} aria-hidden="true" /></div>
                   <span className="text-sm font-bold text-gray-700">Fresh Harvest</span>
                 </div>
               </div>
